@@ -23,6 +23,16 @@ namespace customstring {
 			value[i] = s[i];
 		}
 	}
+	string::string(const string& s) value(nullptr), size(len(s))
+	{
+		size = s.Size();
+		value = new char[size + 1];
+		value[size] = '\0';
+		for (size_t i = 0; i < size; i++)
+		{
+			value[i] = s.at(i);
+		}
+	}
 	string::~string()
 	{
 		delete[] value;

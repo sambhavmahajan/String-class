@@ -14,6 +14,7 @@ namespace customstring
 	public:
 		string();
 		string(const char*);
+		string(const string&);
 		~string();
 
 		size_t Size () const;
