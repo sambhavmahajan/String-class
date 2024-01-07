@@ -5,6 +5,7 @@
 namespace customstring
 {
 	size_t len(char*);
+	
 	class string
 	{
 	private:
@@ -22,5 +23,6 @@ namespace customstring
 		string operator+(const string&,const string&) const;
 		string operator+(const string&, const char *) const;
 	};
+	string rev(string&);
 }
 #endif

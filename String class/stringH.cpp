@@ -12,6 +12,7 @@ namespace customstring {
 		}
 		return i;
 	}
+
 	string::string() value(nullptr), size(0) {}
 	string::string(const char* s) value(nullptr), size(len(s))
 	{
@@ -86,6 +87,17 @@ namespace customstring {
 			s[i + j] = b[j - 1];
 		}
 		string r{ s };
+		return r;
+	}
+	string rev(string& str)
+	{
+		char c[s.Size()+1];
+		c[s.Size()] = '\0';
+		for (int i = 0; i < s.Size(); i++)
+		{
+			c[i] = str.at(s.Size() - 1 - i);
+		}
+		string r{ str };
 		return r;
 	}
 
