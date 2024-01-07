@@ -86,9 +86,9 @@ namespace customstring {
 	{
 		char arr[length + 1];
 		arr[length] = '\0';
-		for (int i = start; i < length; i++)
+		for (int i = start; i < start + length; i++)
 		{
-			arr[start - i] = value[i];
+			arr[i - start] = value[i];
 			if (value[i] == '\0')
 			{
 				string t{ arr };
