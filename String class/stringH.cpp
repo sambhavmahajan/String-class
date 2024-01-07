@@ -155,7 +155,8 @@ namespace customstring {
 		{
 			s[i] = a.at(i);
 		}
-		for (size_t j = 1; j - 1 < b.size; j++)
+		size_t blen = len(b);
+		for (size_t j = 1; j - 1 < blen; j++)
 		{
 			s[i + j] = b[j - 1];
 		}
@@ -172,7 +173,8 @@ namespace customstring {
 		{
 			s[i] = a.at(i);
 		}
-		for (size_t j = 1; j - 1 < b.size; j++)
+		size_t blen = len(b);
+		for (size_t j = 1; j - 1 < blen; j++)
 		{
 			s[i + j] = b[j - 1];
 		}
