@@ -86,6 +86,7 @@ namespace customstring {
 			}
 		}
 		string r{arr}
+		return r;
 	}
 	string string::operator+(const string& a, const string& b) const
 	{
