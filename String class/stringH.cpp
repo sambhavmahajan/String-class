@@ -26,4 +26,8 @@ namespace customstring {
 	{
 		return size;
 	}
+	const *char cStr() const
+	{
+		return value;
+	}
 }

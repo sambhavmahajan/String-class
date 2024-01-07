@@ -13,7 +13,8 @@ namespace customstring
 		string();
 		string(const char*);
 		~string();
-		size_t Size const();
+		size_t Size () const;
+		const* char cStr() const;
 	};
 }
 #endif
