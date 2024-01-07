@@ -1,5 +1,7 @@
 #ifndef STRINGH_H
 #define STRINGH_H
+
+#include <cstddef>
 namespace customstring
 {
 	class string
