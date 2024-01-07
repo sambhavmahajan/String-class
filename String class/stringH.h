@@ -32,6 +32,8 @@ namespace customstring
 		bool operator==(const string&, const string&) const;
 		bool operator==(const string&, const char*) const;
 		bool operator==(const char*, const string&) const;
+		string& operator=(const char*);
+		string& operator=(const string&);
 	};
 }
 #endif

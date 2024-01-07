@@ -225,4 +225,27 @@ namespace customstring {
 		}
 		return true;
 	}
+	string& string::operator=(const char* str) {
+		size_t l = len(str);
+		char* newStr = new char[l + 1];
+		newStr[l] = '\0';
+		delete[] value;
+		for (int i = 0; i < l; i++) {
+			newStr[i] = str[i];
+		}
+		return *this;
+	}
+	string& string::operator=(const string& str)
+	{
+		if (this != &str)
+		{
+			delete[] value;
+			char* newStr = new char[str.Size() + 1];
+			newStr[str.Size()] = '\0';
+			for (int i = 0; i < str.Size(); i++) {
+				newStr[i] = str.at(i);
+			}
+		}
+		return *this;
+	}
 }
