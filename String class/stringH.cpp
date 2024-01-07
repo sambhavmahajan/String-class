@@ -72,7 +72,7 @@ namespace customstring {
 			j--;
 		}
 		int l = j - i + 1;
-		char s[] = new char[l + 1];
+		char *s = new char[l + 1];
 		s[l] = '\0';
 		int t = 0;
 		for (int k = i; k <= j; k++)
