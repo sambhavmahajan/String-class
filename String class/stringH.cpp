@@ -18,4 +18,8 @@ namespace customstring {
 			value[size] = s[i];
 		}
 	}
+	string::~string()
+	{
+		delete[] value;
+	}
 }
