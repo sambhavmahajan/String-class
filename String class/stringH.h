@@ -20,6 +20,7 @@ namespace customstring
 		const char* cStr() const;
 		const char at(size_t) const;
 		void trim();
+		string subStr(string&);
 
 		string operator+(const string&,const string&) const;
 		string operator+(const string&, const char *) const;

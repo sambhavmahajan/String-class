@@ -61,6 +61,21 @@ namespace customstring {
 		delete[] value;
 		value = s;
 	}
+	string string::subStr(int start, int length)
+	{
+		char arr[length + 1];
+		arr[length] = '\0';
+		for (int i = start; i < length; i++)
+		{
+			arr[start - i] = value[i];
+			if (value[i] == '\0')
+			{
+				string t{ arr };
+				return t;
+			}
+		}
+		string r{arr}
+	}
 	string string::operator+(const string& a, const string& b) const
 	{
 		size_t l = a.Size() + b.Size();
