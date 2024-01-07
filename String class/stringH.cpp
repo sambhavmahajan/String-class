@@ -3,6 +3,15 @@
 #include <iostream>
 
 namespace customstring {
+	size_t len(char* s)
+	{
+		size_t i = 0;
+		while (s[i] != '\0')
+		{
+			i++;
+		}
+		return i;
+	}
 	string::string() value(nullptr), size(0) {}
 	string::string(const char* s)
 	{

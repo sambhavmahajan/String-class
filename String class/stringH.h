@@ -4,6 +4,7 @@
 #include <cstddef>
 namespace customstring
 {
+	size_t len(char*);
 	class string
 	{
 	private:
