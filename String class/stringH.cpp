@@ -38,6 +38,17 @@ namespace customstring {
 	const char string::at(size_t index) const {
 		return value[index];
 	}
+	string string::rev(string& str)
+	{
+		char c[s.Size() + 1];
+		c[s.Size()] = '\0';
+		for (int i = 0; i < s.Size(); i++)
+		{
+			c[i] = str.at(s.Size() - 1 - i);
+		}
+		string r{ str };
+		return r;
+	}
 	void string::trim()
 	{
 		int i = 0;
@@ -125,17 +136,6 @@ namespace customstring {
 			s[i + j] = b[j - 1];
 		}
 		string r{ s };
-		return r;
-	}
-	string rev(string& str)
-	{
-		char c[s.Size()+1];
-		c[s.Size()] = '\0';
-		for (int i = 0; i < s.Size(); i++)
-		{
-			c[i] = str.at(s.Size() - 1 - i);
-		}
-		string r{ str };
 		return r;
 	}
 

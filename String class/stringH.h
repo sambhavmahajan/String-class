@@ -19,12 +19,12 @@ namespace customstring
 		size_t Size () const;
 		const char* cStr() const;
 		const char at(size_t) const;
+		string rev(string&);
 		void trim();
 		string subStr(string&);
 
 		string operator+(const string&,const string&) const;
 		string operator+(const string&, const char *) const;
 	};
-	string rev(string&);
 }
 #endif
