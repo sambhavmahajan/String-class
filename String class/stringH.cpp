@@ -138,5 +138,48 @@ namespace customstring {
 		string r{ s };
 		return r;
 	}
-
+	bool string::operator==(const string& s1, const string& s2) const
+	{
+		if (s1.Size() != s2.Size())
+		{
+			return false;
+		}
+		for (int i = 0; i < s1.Size(); i++)
+		{
+			if (s1.at(i) != s2.at(i)) {
+				return false;
+			}
+		}
+		return true;
+	}
+	bool string::operator==(const string& s1, const char* s2) const
+	{
+		l = len(s2);
+		if (s1.Size() != l)
+		{
+			return false;
+		}
+		for (int i = 0; i < l; i++)
+		{
+			if (s1.at(i) != s2[i]) {
+				return false;
+			}
+		}
+		return true;
+	}
+	bool string::operator==(const char* s1, const string& s2) const
+	{
+		l = len(s1);
+		if (s2.Size() != l)
+		{
+			return false;
+		}
+		for (int i = 0; i < l; i++)
+		{
+			if (s2.at(i) != s1[i]) {
+				return false;
+			}
+		}
+		return true;
+	}
 }

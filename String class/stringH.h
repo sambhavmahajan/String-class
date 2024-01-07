@@ -26,6 +26,9 @@ namespace customstring
 		string operator+(const string&,const string&) const;
 		string operator+(const string&, const char *) const;
 		string operator+(const char*, const string&) const;
+		bool operator==(const string&, const string&) const;
+		bool operator==(const string&, const char*) const;
+		bool operator==(const char*, const string&) const;
 	};
 }
 #endif
