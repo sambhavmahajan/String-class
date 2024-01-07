@@ -19,6 +19,7 @@ namespace customstring
 		size_t Size () const;
 		const char* cStr() const;
 		const char at(size_t) const;
+		void trim();
 
 		string operator+(const string&,const string&) const;
 		string operator+(const string&, const char *) const;

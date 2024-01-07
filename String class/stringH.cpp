@@ -38,6 +38,29 @@ namespace customstring {
 	const char string::at(size_t index) const {
 		return value[index];
 	}
+	void string::trim()
+	{
+		int i = 0;
+		while (value[i] == ' ' || value[i] == '\t')
+		{
+			i++;
+		}
+		int j = size-1;
+		while (value[j] == ' ' || value[j] == '\t')
+		{
+			j--;
+		}
+		int l = j - i + 1;
+		char s[] = new char[l + 1];
+		s[l] = '\0';
+		int t = 0;
+		for (int k = i; k <= j; k++)
+		{
+			s[t++] = value[k];
+		}
+		delete[] value;
+		value = s;
+	}
 	string string::operator+(const string& a, const string& b) const
 	{
 		size_t l = a.Size() + b.Size();
