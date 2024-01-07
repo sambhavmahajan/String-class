@@ -41,3 +41,5 @@ To use this library in your C++ project, follow these steps:
   - `bool operator==(const string&, const string&) const`: Checks if two strings are equal.
   - `bool operator==(const string&, const char*) const`: Checks if a string is equal to a C-style string.
   - `bool operator==(const char*, const string&) const`: Checks if a C-style string is equal to a string.
+  - `string& operator=(const char*)`: Assigns a C-style string to the string.
+  - `string& operator=(const string&)`: Assigns a string to the string.
