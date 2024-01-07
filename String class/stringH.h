@@ -5,10 +5,12 @@ namespace customstring
 	class string
 	{
 	private:
-		char* value = nullptr;
+		char* value;
+		size_t size;
 	public:
 		string();
-		string("");
+		string(const char*);
+		~string();
 	};
 }
 #endif
