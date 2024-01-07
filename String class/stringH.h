@@ -14,8 +14,12 @@ namespace customstring
 		string();
 		string(const char*);
 		~string();
+
 		size_t Size () const;
-		const* char cStr() const;
+		const char* cStr() const;
+		const char at(size_t) const;
+
+		string operator+(const string&) const;
 	};
 }
 #endif

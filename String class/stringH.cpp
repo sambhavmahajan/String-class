@@ -3,7 +3,7 @@
 #include <iostream>
 
 namespace customstring {
-	size_t len(char* s)
+	size_t len(const char* s)
 	{
 		size_t i = 0;
 		while (s[i] != '\0')
@@ -13,13 +13,8 @@ namespace customstring {
 		return i;
 	}
 	string::string() value(nullptr), size(0) {}
-	string::string(const char* s)
+	string::string(const char* s) value(nullptr), size(len(s))
 	{
-		string();
-		while (s[size] != '\0')
-		{
-			size++;
-		}
 		value = new char[size + 1];
 		value[size] = '\0';
 		for (size_t i = 0; i < size; i++)
@@ -35,8 +30,29 @@ namespace customstring {
 	{
 		return size;
 	}
-	const *char string::cStr() const
+	const char* string::cStr() const
 	{
 		return value;
 	}
+	const char string::at(size_t index) const {
+		return value[index];
+	}
+	string string::operator+(const string& a, const string& b) const
+	{
+		size_t l = a.Size() + b.Size();
+		char s[l + 1];
+		s[l] = '\0';
+		size_t i;
+		for (i = 0; i < a.Size(); i++)
+		{
+			s[i] = a.at(i);
+		}
+		for (size_t j = 1; j - 1 < b.size; j++)
+		{
+			s[i + j] = b.at(j - 1);
+		}
+		string r{ s };
+		return r;
+	}
+
 }
