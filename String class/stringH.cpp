@@ -26,7 +26,7 @@ namespace customstring {
 	{
 		return size;
 	}
-	const *char cStr() const
+	const *char string::cStr() const
 	{
 		return value;
 	}
