@@ -38,7 +38,7 @@ namespace customstring {
 	const char string::at(size_t index) const {
 		return value[index];
 	}
-	string string::rev(string& str)
+	static string string::rev(string& str)
 	{
 		char c[s.Size() + 1];
 		c[s.Size()] = '\0';
@@ -72,7 +72,7 @@ namespace customstring {
 		delete[] value;
 		value = s;
 	}
-	string string::subStr(int start, int length)
+	string string::subStr(int& start, int& length)
 	{
 		char arr[length + 1];
 		arr[length] = '\0';
@@ -86,6 +86,36 @@ namespace customstring {
 			}
 		}
 		string r{arr}
+		return r;
+	}
+	static string string::tolower(const string& str)
+	{
+		char s[str.Size() + 1];
+		s[str.Size()] = '\0';
+		for (int i = 0; i < str.Size(); i++)
+		{
+			s[i] = str.at(i);
+			if (str.at(i) >= 'A' && str.at(i) <= 'Z')
+			{
+				s[i] += 32;
+			}
+		}
+		string r{ s };
+		return r;
+	}
+	static string string::toupper(const string& str)
+	{
+		char s[str.Size() + 1];
+		s[str.Size()] = '\0';
+		for (int i = 0; i < str.Size(); i++)
+		{
+			s[i] = str.at(i);
+			if (str.at(i) >= 'a' && str.at(i) <= 'z')
+			{
+				s[i] -= 32;
+			}
+		}
+		string r{ s };
 		return r;
 	}
 	string string::operator+(const string& a, const string& b) const
