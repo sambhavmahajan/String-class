@@ -20,7 +20,7 @@ namespace customstring
 		const char at(size_t) const;
 
 		string operator+(const string&,const string&) const;
-
+		string operator+(const string&, const char *) const;
 	};
 }
 #endif

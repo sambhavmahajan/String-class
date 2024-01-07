@@ -54,6 +54,39 @@ namespace customstring {
 		string r{ s };
 		return r;
 	}
-
+	string string::operator+(const string& a, const char* b) const
+	{
+		size_t l = a.Size() + len(b);
+		char s[l + 1];
+		s[l] = '\0';
+		size_t i;
+		for (i = 0; i < a.Size(); i++)
+		{
+			s[i] = a.at(i);
+		}
+		for (size_t j = 1; j - 1 < b.size; j++)
+		{
+			s[i + j] = b[j - 1];
+		}
+		string r{ s };
+		return r;
+	}
+	string string::operator+(const char* b,const string& a) const
+	{
+		size_t l = a.Size() + len(b);
+		char s[l + 1];
+		s[l] = '\0';
+		size_t i;
+		for (i = 0; i < a.Size(); i++)
+		{
+			s[i] = a.at(i);
+		}
+		for (size_t j = 1; j - 1 < b.size; j++)
+		{
+			s[i + j] = b[j - 1];
+		}
+		string r{ s };
+		return r;
+	}
 
 }
