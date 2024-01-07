@@ -50,11 +50,11 @@ namespace customstring {
 	}
 	static string string::rev(string& str)
 	{
-		char c[s.Size() + 1];
-		c[s.Size()] = '\0';
-		for (int i = 0; i < s.Size(); i++)
+		char c[str.Size() + 1];
+		c[str.Size()] = '\0';
+		for (int i = 0; i < str.Size(); i++)
 		{
-			c[i] = str.at(s.Size() - 1 - i);
+			c[i] = str.at(str.Size() - 1 - i);
 		}
 		string r{ str };
 		return r;
