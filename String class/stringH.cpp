@@ -22,4 +22,8 @@ namespace customstring {
 	{
 		delete[] value;
 	}
+	size_t string::Size() const
+	{
+		return size;
+	}
 }
