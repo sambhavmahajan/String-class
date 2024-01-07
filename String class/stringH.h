@@ -22,7 +22,7 @@ namespace customstring
 		const char at(size_t) const;
 		static string rev(string&);
 		void trim();
-		string subStr(int&, &int);
+		string subStr(int&, int&);
 		static string tolower(const string&);
 		static string toupper(const string&);
 
