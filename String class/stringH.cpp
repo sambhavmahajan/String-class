@@ -56,7 +56,7 @@ namespace customstring {
 		{
 			c[i] = str.at(str.Size() - 1 - i);
 		}
-		string r{ str };
+		string r{ c };
 		return r;
 	}
 	void string::trim()
