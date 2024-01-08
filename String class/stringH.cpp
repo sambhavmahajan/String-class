@@ -140,7 +140,7 @@ namespace customstring {
 		}
 		for (size_t j = 1; j - 1 < b.size; j++)
 		{
-			s[i + j] = b.at(j - 1);
+			if (i + j < l) s[i + j] = b.at(j - 1);
 		}
 		string r{ s };
 		return r;
@@ -153,7 +153,7 @@ namespace customstring {
 		size_t i;
 		for (i = 0; i < a.Size(); i++)
 		{
-			s[i] = a.at(i);
+			if (i + j < l) s[i] = a.at(i);
 		}
 		size_t blen = len(b);
 		for (size_t j = 1; j - 1 < blen; j++)
@@ -176,7 +176,7 @@ namespace customstring {
 		size_t blen = len(b);
 		for (size_t j = 1; j - 1 < blen; j++)
 		{
-			s[i + j] = b[j - 1];
+			if (i + j < l) s[i + j] = b[j - 1];
 		}
 		string r{ s };
 		return r;
