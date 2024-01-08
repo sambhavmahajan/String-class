@@ -48,7 +48,7 @@ namespace customstring {
 	const char string::at(size_t index) const {
 		return value[index];
 	}
-	static string string::rev(string& str)
+	string string::rev(string& str)
 	{
 		char c[str.Size() + 1];
 		c[str.Size()] = '\0';
@@ -98,7 +98,7 @@ namespace customstring {
 		string r{arr}
 		return r;
 	}
-	static string string::tolower(const string& str)
+	string string::tolower(const string& str)
 	{
 		char s[str.Size() + 1];
 		s[str.Size()] = '\0';
@@ -113,7 +113,7 @@ namespace customstring {
 		string r{ s };
 		return r;
 	}
-	static string string::toupper(const string& str)
+	string string::toupper(const string& str)
 	{
 		char s[str.Size() + 1];
 		s[str.Size()] = '\0';
