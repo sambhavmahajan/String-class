@@ -95,7 +95,7 @@ namespace customstring {
 				return t;
 			}
 		}
-		string r{arr}
+		string r{ arr };
 		return r;
 	}
 	string string::tolower(const string& str)
