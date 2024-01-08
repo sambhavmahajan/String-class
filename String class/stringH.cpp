@@ -23,7 +23,7 @@ namespace customstring {
 			value[i] = s[i];
 		}
 	}
-	string::string(const string& s) : value(nullptr), size(len(s))
+	string::string(const string& s) : value(nullptr), size(s.Size())
 	{
 		size = s.Size();
 		value = new char[size + 1];
