@@ -50,7 +50,7 @@ namespace customstring {
 	}
 	string string::rev(string& str)
 	{
-		char c[str.Size() + 1];
+		char *c = new char[str.Size() + 1];
 		c[str.Size()] = '\0';
 		for (int i = 0; i < str.Size(); i++)
 		{
@@ -100,7 +100,7 @@ namespace customstring {
 	}
 	string string::tolower(const string& str)
 	{
-		char s[str.Size() + 1];
+		char *s = new char[str.Size() + 1];
 		s[str.Size()] = '\0';
 		for (int i = 0; i < str.Size(); i++)
 		{
@@ -115,7 +115,7 @@ namespace customstring {
 	}
 	string string::toupper(const string& str)
 	{
-		char s[str.Size() + 1];
+		char *s = new char[str.Size() + 1];
 		s[str.Size()] = '\0';
 		for (int i = 0; i < str.Size(); i++)
 		{
