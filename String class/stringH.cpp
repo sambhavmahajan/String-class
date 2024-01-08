@@ -13,8 +13,8 @@ namespace customstring {
 		return i;
 	}
 
-	string::string() value(nullptr), size(0) {}
-	string::string(const char* s) value(nullptr), size(len(s))
+	string::string(): value(nullptr), size(0) {}
+	string::string(const char* s): value(nullptr), size(len(s))
 	{
 		value = new char[size + 1];
 		value[size] = '\0';
@@ -23,7 +23,7 @@ namespace customstring {
 			value[i] = s[i];
 		}
 	}
-	string::string(const string& s) value(nullptr), size(len(s))
+	string::string(const string& s): value(nullptr), size(len(s))
 	{
 		size = s.Size();
 		value = new char[size + 1];
