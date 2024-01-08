@@ -37,7 +37,7 @@ namespace customstring {
 	{
 		delete[] value;
 	}
-	size_t string::Size() const
+	const size_t string::Size() const
 	{
 		return size;
 	}
@@ -131,7 +131,7 @@ namespace customstring {
 	string operator+(const string& a, const string& b)
 	{
 		size_t l = a.Size() + b.Size();
-		char s[l + 1];
+		char* s = new char[l + 1];
 		s[l] = '\0';
 		size_t i;
 		for (i = 0; i < a.Size(); i++)
@@ -148,7 +148,7 @@ namespace customstring {
 	string operator+(const string& a, const char* b)
 	{
 		size_t l = a.Size() + len(b);
-		char s[l + 1];
+		char* s = new char[l + 1];
 		s[l] = '\0';
 		size_t i;
 		for (i = 0; i < a.Size(); i++)
@@ -166,7 +166,7 @@ namespace customstring {
 	string operator+(const char* b, const string& a)
 	{
 		size_t l = a.Size() + len(b);
-		char s[l + 1];
+		char* s = new char[l + 1];
 		s[l] = '\0';
 		size_t i;
 		for (i = 0; i < a.Size(); i++)
