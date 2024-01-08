@@ -197,7 +197,7 @@ namespace customstring {
 	}
 	bool string::operator==(const string& s1, const char* s2) const
 	{
-		l = len(s2);
+		size_t l = len(s2);
 		if (s1.Size() != l)
 		{
 			return false;
@@ -212,7 +212,7 @@ namespace customstring {
 	}
 	bool string::operator==(const char* s1, const string& s2) const
 	{
-		l = len(s1);
+		size_t l = len(s1);
 		if (s2.Size() != l)
 		{
 			return false;
