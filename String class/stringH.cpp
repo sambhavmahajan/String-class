@@ -84,7 +84,7 @@ namespace customstring {
 	}
 	string string::subStr(int& start, int& length)
 	{
-		char arr[length + 1];
+		char *s = new char[length + 1];
 		arr[length] = '\0';
 		for (int i = start; i < start + length; i++)
 		{
