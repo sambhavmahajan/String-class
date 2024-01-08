@@ -13,8 +13,8 @@ namespace customstring {
 		return i;
 	}
 
-	string::string(): value(nullptr), size(0) {}
-	string::string(const char* s): value(nullptr), size(len(s))
+	string::string() : value(nullptr), size(0) {}
+	string::string(const char* s) : value(nullptr), size(len(s))
 	{
 		value = new char[size + 1];
 		value[size] = '\0';
@@ -23,7 +23,7 @@ namespace customstring {
 			value[i] = s[i];
 		}
 	}
-	string::string(const string& s): value(nullptr), size(len(s))
+	string::string(const string& s) : value(nullptr), size(len(s))
 	{
 		size = s.Size();
 		value = new char[size + 1];
@@ -66,13 +66,13 @@ namespace customstring {
 		{
 			i++;
 		}
-		int j = size-1;
+		int j = size - 1;
 		while (value[j] == ' ' || value[j] == '\t')
 		{
 			j--;
 		}
 		int l = j - i + 1;
-		char *s = new char[l + 1];
+		char* s = new char[l + 1];
 		s[l] = '\0';
 		int t = 0;
 		for (int k = i; k <= j; k++)
@@ -128,7 +128,7 @@ namespace customstring {
 		string r{ s };
 		return r;
 	}
-	string string::operator+(const string& a, const string& b) const
+	string operator+(const string& a, const string& b)
 	{
 		size_t l = a.Size() + b.Size();
 		char s[l + 1];
@@ -145,7 +145,7 @@ namespace customstring {
 		string r{ s };
 		return r;
 	}
-	string string::operator+(const string& a, const char* b) const
+	string operator+(const string& a, const char* b)
 	{
 		size_t l = a.Size() + len(b);
 		char s[l + 1];
@@ -163,7 +163,7 @@ namespace customstring {
 		string r{ s };
 		return r;
 	}
-	string string::operator+(const char* b,const string& a) const
+	string operator+(const char* b, const string& a)
 	{
 		size_t l = a.Size() + len(b);
 		char s[l + 1];
@@ -181,7 +181,7 @@ namespace customstring {
 		string r{ s };
 		return r;
 	}
-	bool string::operator==(const string& s1, const string& s2) const
+	bool operator==(const string& s1, const string& s2)
 	{
 		if (s1.Size() != s2.Size())
 		{
@@ -195,7 +195,7 @@ namespace customstring {
 		}
 		return true;
 	}
-	bool string::operator==(const string& s1, const char* s2) const
+	bool operator==(const string& s1, const char* s2)
 	{
 		size_t l = len(s2);
 		if (s1.Size() != l)
@@ -210,7 +210,7 @@ namespace customstring {
 		}
 		return true;
 	}
-	bool string::operator==(const char* s1, const string& s2) const
+	bool operator==(const char* s1, const string& s2)
 	{
 		size_t l = len(s1);
 		if (s2.Size() != l)
