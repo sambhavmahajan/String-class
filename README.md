@@ -33,7 +33,7 @@ To use this library in your C++ project, follow these steps:
   - `string subStr(int&, int&)`: Returns a substring based on the start and length.
   - `static string tolower(const string&)`: Converts the string to lowercase.
   - `static string toupper(const string&)`: Converts the string to uppercase.
-
+  - `bool modify(int index, char val)`: Modifies string at index, then returns true on success.
 - Overloaded Operators:
   - `string operator+(const string&, const string&) const`: Concatenates two strings.
   - `string operator+(const string&, const char*) const`: Concatenates a string and a C-style string.
