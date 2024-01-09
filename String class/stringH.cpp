@@ -128,6 +128,15 @@ namespace customstring {
 		string r{ s };
 		return r;
 	}
+	bool string::modify(int index, char val)
+	{
+		if (index >= 0 && index < size)
+		{
+			value[index] = val;
+			return true;
+		}
+		return false;
+	}
 	string operator+(const string& a, const string& b)
 	{
 		size_t l = a.Size() + b.Size();

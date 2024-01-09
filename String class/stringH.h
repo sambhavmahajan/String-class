@@ -25,6 +25,7 @@ namespace customstring
 		string subStr(int&, int&);
 		static string tolower(const string&);
 		static string toupper(const string&);
+		bool modify(int index, char val);
 
 		friend string operator+(const string&, const string&);
 		friend string operator+(const string&, const char*);
