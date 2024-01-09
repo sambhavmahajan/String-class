@@ -46,7 +46,7 @@ namespace customstring {
 		return value;
 	}
 	const char string::at(size_t index) const {
-		return value[index];
+		return (index > -1 && index < size) ? value[index] : '\0';
 	}
 	string string::rev(string& str)
 	{
