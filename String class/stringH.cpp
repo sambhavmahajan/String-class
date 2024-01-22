@@ -37,15 +37,15 @@ namespace customstring {
 	{
 		delete[] value;
 	}
-	const size_t string::Size() const
+	size_t string::Size() const
 	{
 		return size;
 	}
-	const char* string::cStr() const
+	char* string::cStr() const
 	{
 		return value;
 	}
-	const char string::at(size_t index) const {
+	char string::at(size_t index) const {
 		return (index > -1 && index < size) ? value[index] : '\0';
 	}
 	string string::rev(string& str)
