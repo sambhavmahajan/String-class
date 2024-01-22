@@ -13,7 +13,7 @@ namespace customstring {
 		return i;
 	}
 
-	string::string() : value(nullptr), size(0) {}
+	string::string() : value('\0'), size(0) {}
 	string::string(const char* s) : value(nullptr), size(len(s))
 	{
 		value = new char[size + 1];
